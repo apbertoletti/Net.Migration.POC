@@ -17,7 +17,7 @@ namespace EF.Database
                 Console.WriteLine("Migration succeeded!");
                 Console.ResetColor();
 
-                return 0;
+                return 0; //This value can be used to DevOps flow
             }
             catch (Exception e)
             {
