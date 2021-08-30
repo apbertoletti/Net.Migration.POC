@@ -3,7 +3,7 @@ Console application database migration POC, use EF Core without data model, that
 
 The idea of this approach is to allow it to be used with legacy databases, and this console application put in the pipeline DevOps.
 
-This repository is free to fork and receive improvements.
+This POC is free to fork and receive improvements.
 
 ## How to use
 
