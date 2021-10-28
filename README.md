@@ -28,3 +28,27 @@ dotnet ef migrations add Name-Of-Your-Migration
 4. Run the console application to apply the migrations in your database.
 
 
+## EF Migration commands
+
+1. Adding new migration
+~~~
+dotnet ef migrations add Name-Of-Your-Migration
+~~~
+
+
+2. Removing the last migration
+~~~
+dotnet ef migrations remove
+~~~
+
+
+3. Back to an especific migration on the Database
+~~~
+dotnet ef database update Name-Of-Back-Migration-You-Want-Go
+~~~
+
+
+4. Run the current migration´s state on the Database
+~~~
+dotnet ef database update
+~~~
