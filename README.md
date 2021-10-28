@@ -30,6 +30,8 @@ dotnet ef migrations add Name-Of-Your-Migration
 
 ## EF Migration commands
 
+You can run the follow commands directly on the console (remember to navigate to migration project before):
+
 1. Adding new migration
 ~~~
 dotnet ef migrations add Name-Of-Your-Migration
