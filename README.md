@@ -44,13 +44,13 @@ dotnet ef migrations remove
 ~~~
 
 
-3. Back to an especific migration on the Database
+3. Backing to an especific migration on the Database
 ~~~
 dotnet ef database update Name-Of-Back-Migration-You-Want-Go
 ~~~
 
 
-4. Run the current migration´s state on the Database
+4. Running the current migration´s state on the Database
 ~~~
 dotnet ef database update
 ~~~
