@@ -89,5 +89,5 @@ dotnet ef database update -Migration:0 //Number of migration you want to back (z
 
 ## Migration Best Practices
 
-1. Choose a short and descriptive migration name. Think of this as a git commit message.
+1. Choose a short and descriptive migration name. Think of this as a git commit message. For example: "Add-Column-Email-ToTable-Customer"
 2. Try to use atomic migrations, each one with its context. For example, you need to create a new column and populate it, prefer to do two migrations, one to create the new column and the other to populate its content.
