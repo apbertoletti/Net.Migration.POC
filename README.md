@@ -19,7 +19,7 @@ This POC is free to fork and receive improvements.
 
 4. Check the connection string constants in AppContext.cs file, and verify that they are targeting to the corresponding databases
  
-5. Add a new migration (choose your preferred approach in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) below)
+5. Add a new migration (choose your preferred approach in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) below). Consider reading this [best practice session](https://github.com/apbertoletti/Net.Migration.POC/blob/master/README.md#migration-best-practices) before.
 
 6. Put your Up and Down script raw SQL in the new migration file created. It could be any kind of script (DML or DDL).
 
