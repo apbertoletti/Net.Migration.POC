@@ -11,19 +11,23 @@ This POC is free to fork and receive improvements.
 
 ## How to use
 
-1. Install the [.Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+1. Create two new databases (LegacyDB and LegacyDB_Sandbox) and runt the [initial scripts](https://github.com/apbertoletti/Net.Migration.POC/blob/master/InitialScripts.sql) in each one
 
-2. Clone this repository (or donwload the Zip)
+2. Install the [.Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
-3. Adjusts ConnectionString in AppContext.cs file, targeting to the sandbox and production database
+3. Clone this [code repository](https://github.com/apbertoletti/Net.Migration.POC.git) (or donwload the Zip)
+
+4. Check the connection strings in AppContext.cs file, and verify that they are targeting to the corresponding databases
  
-4. Add the migration (choose your preferred approach in the "EF Migration commands" sessions below)
+5. Add a new migration (choose your preferred approach in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) below)
 
-5. Put your Up and Down script raw SQL in the new migration file created
+6. Put your Up and Down script raw SQL in the new migration file created
 
 ![image](https://user-images.githubusercontent.com/6843493/131741786-973d5f35-062c-43d4-b193-e312feb21767.png)
 
-6. Run the console application and answer the questions to apply the migrations in your target database.
+7. Run the console application choosing what target database do you want to apply the pending migrations
+
+8. Refresh the target database and check the migration applied
 
 ## EF Migration commands (via Package Manager Console)
 

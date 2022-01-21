@@ -18,15 +18,11 @@ CREATE TABLE [dbo].[Customer](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 
-USE [LegacyDB]
-GO
-
 INSERT INTO [dbo].[Customer] ([Name],[Address],[City],[Province],[Note]) VALUES ('Customer 1', 'Address 1', 'City 1', 'FL', 'Note 1')
 INSERT INTO [dbo].[Customer] ([Name],[Address],[City],[Province],[Note]) VALUES ('Customer 2', 'Address 2', 'City 2', 'FL', 'Note 2')
 INSERT INTO [dbo].[Customer] ([Name],[Address],[City],[Province],[Note]) VALUES ('Customer 3', 'Address 3', 'City 3', 'FL', 'Note 3')
 INSERT INTO [dbo].[Customer] ([Name],[Address],[City],[Province],[Note]) VALUES ('Customer 4', 'Address 4', 'City 4', 'FL', 'Note 4')
 GO
-
 
 
 
