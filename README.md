@@ -23,7 +23,7 @@ This POC is free to fork and receive improvements.
 
 6. Put your Up and Down script raw SQL in the new migration file created
 
-![image](https://user-images.githubusercontent.com/6843493/131741786-973d5f35-062c-43d4-b193-e312feb21767.png)
+![image](https://user-images.githubusercontent.com/6843493/150584931-8a5f04f5-9384-4a34-a4bc-49c0eabfac8c.png)
 
 7. Run the console application choosing what target database do you want to apply the pending migrations
 
@@ -76,6 +76,10 @@ dotnet ef migrations remove
 4. Backing to an especific migration on the Database
 ~~~
 dotnet ef database update Name-Of-Migration-You-Want-Back
+~~~
+or
+~~~
+Update-Database -Migration:0 //Number of migration you want to back (zero if rollback all migrations)
 ~~~
 
 
