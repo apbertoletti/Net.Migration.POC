@@ -12,9 +12,9 @@ namespace EF.Database
     public class AppContext : DbContext
     {
         //The connection strings also could be read from the some external file        
-        private string connectionString_Sandbox = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB_Sandbox;Integrated Security=true";
+        private const string CONNECTION_STRING_SANDBOX = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB_Sandbox;Integrated Security=true";
 
-        private string connectionString_Production = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB;Integrated Security=true";
+        private const string CONNECTION_STRING_PRODUCTION = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB;Integrated Security=true";
 
         private bool _runInProduction;
 
@@ -31,7 +31,7 @@ namespace EF.Database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer((_runInProduction ? connectionString_Production : connectionString_Sandbox))
+                .UseSqlServer((_runInProduction ? CONNECTION_STRING_PRODUCTION : CONNECTION_STRING_SANDBOX))
                 .LogTo(Console.WriteLine, LogLevel.Information)
                 .ReplaceService<IHistoryRepository, MyHistoryRepository>()
                 .EnableSensitiveDataLogging();
