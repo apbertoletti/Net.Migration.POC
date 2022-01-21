@@ -27,10 +27,31 @@ dotnet ef migrations add Name-Of-Your-Migration
 
 4. Run the console application to apply the migrations in your target database.
 
+## EF Migration commands (via Package Manager Console)
 
-## EF Migration commands
+You can run the follow commands directly on the Package Manager Console in Visual Studio (remember to set the Default Project to migration project before):
 
-You can run the follow commands directly on the .Net CLI (remember to navigate to migration project before):
+1. Adding new migration
+~~~
+Add-Migration Name-Of-Your-Migration
+~~~
+
+
+2. Removing the last migration
+~~~
+Remove-Migration
+~~~
+
+
+3. Backing to an especific migration on the Database
+~~~
+Update-Database Name-Of-Migration-You-Want-Back
+~~~
+
+
+## EF Migration commands (via .Net CLI)
+
+You can run the follow commands directly on the .Net CLI (remember to navigate to migration project folder before):
 
 1. Adding new migration
 ~~~
@@ -46,7 +67,7 @@ dotnet ef migrations remove
 
 3. Backing to an especific migration on the Database
 ~~~
-dotnet ef database update Name-Of-Back-Migration-You-Want-Go
+dotnet ef database update Name-Of-Migration-You-Want-Back
 ~~~
 
 
