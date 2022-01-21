@@ -17,7 +17,7 @@ This POC is free to fork and receive improvements.
 
 3. Clone this [code repository](https://github.com/apbertoletti/Net.Migration.POC.git) (or donwload the Zip)
 
-4. Check the connection strings in AppContext.cs file, and verify that they are targeting to the corresponding databases
+4. Check the connection string constants in AppContext.cs file, and verify that they are targeting to the corresponding databases
  
 5. Add a new migration (choose your preferred approach in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) below)
 
