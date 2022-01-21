@@ -21,7 +21,7 @@ This POC is free to fork and receive improvements.
  
 5. Add a new migration (choose your preferred approach in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) below)
 
-6. Put your Up and Down script raw SQL in the new migration file created
+6. Put your Up and Down script raw SQL in the new migration file created. It could be any kind of script (DML or DDL).
 
 ![image](https://user-images.githubusercontent.com/6843493/150584931-8a5f04f5-9384-4a34-a4bc-49c0eabfac8c.png)
 
