@@ -17,13 +17,13 @@ This POC is free to fork and receive improvements.
 
 3. Clone this [code repository](https://github.com/apbertoletti/Net.Migration.POC.git) (or donwload the Zip)
 
-4. Check the connection strings in AppContext.cs file, and verify that they are targeting to the corresponding databases
+4. Check the connection string constants in AppContext.cs file, and verify that they are targeting to the corresponding databases
  
-5. Add a new migration (choose your preferred approach in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) below)
+5. Add a new migration (choose your preferred approach in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) below). Consider reading this [best practice session](https://github.com/apbertoletti/Net.Migration.POC/blob/master/README.md#migration-best-practices) before.
 
-6. Put your Up and Down script raw SQL in the new migration file created
+6. Put your Up and Down script raw SQL in the new migration file created. It could be any kind of script (DML or DDL).
 
-![image](https://user-images.githubusercontent.com/6843493/131741786-973d5f35-062c-43d4-b193-e312feb21767.png)
+![image](https://user-images.githubusercontent.com/6843493/150584931-8a5f04f5-9384-4a34-a4bc-49c0eabfac8c.png)
 
 7. Run the console application choosing what target database do you want to apply the pending migrations
 
@@ -45,9 +45,13 @@ Remove-Migration
 ~~~
 
 
-3. Backing to an especific migration on the Database
+3. Backing to an especific migration on the Database (all subsequent migrations will be undone)
 ~~~
 Update-Database Name-Of-Migration-You-Want-Back
+~~~
+or
+~~~
+Update-Database -Migration:0 //Number of migration you want to back (zero if rollback all migrations)
 ~~~
 
 
@@ -73,9 +77,17 @@ dotnet ef migrations remove
 ~~~
 
 
-4. Backing to an especific migration on the Database
+4. Backing to an especific migration on the Database (all subsequent migrations will be undone)
 ~~~
 dotnet ef database update Name-Of-Migration-You-Want-Back
 ~~~
+or
+~~~
+dotnet ef database update -Migration:0 //Number of migration you want to back (zero if rollback all migrations)
+~~~
 
 
+## Migration Best Practices
+
+1. Choose a short and descriptive migration name. Think of this as a git commit message. For example: "Add-Column-Email-ToTable-Customer"
+2. Try to use atomic migrations, each one with its context. For example, you need to create a new column and populate it, prefer to do two migrations, one to create the new column and the other to populate its content.
