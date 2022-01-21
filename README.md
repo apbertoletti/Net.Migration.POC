@@ -3,6 +3,10 @@ Console application database migration POC, use EF Core without data model, that
 
 The idea of this approach is to allow the [Migration concept](https://medium.com/@joelrodrigues/o-que-s%C3%A3o-database-migrations-f817448870a2) to be used with legacy databases, and this console application put in the pipeline DevOps.
 
+Recently the EFMigrationHistory table received an improvement to save more detail information, like bellow:
+
+![image](https://user-images.githubusercontent.com/6843493/150549987-a6afa1c6-8715-4940-ac40-fe0acce9873c.png)
+
 This POC is free to fork and receive improvements.
 
 ## How to use
