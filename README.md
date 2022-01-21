@@ -25,7 +25,7 @@ dotnet ef migrations add Name-Of-Your-Migration
 
 ![image](https://user-images.githubusercontent.com/6843493/131741786-973d5f35-062c-43d4-b193-e312feb21767.png)
 
-4. Run the console application to apply the migrations in your database.
+4. Run the console application to apply the migrations in your target database.
 
 
 ## EF Migration commands
@@ -50,7 +50,3 @@ dotnet ef database update Name-Of-Back-Migration-You-Want-Go
 ~~~
 
 
-4. Running the current migration´s state on the Database
-~~~
-dotnet ef database update
-~~~
