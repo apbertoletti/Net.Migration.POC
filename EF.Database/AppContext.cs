@@ -11,18 +11,27 @@ namespace EF.Database
 {
     public class AppContext : DbContext
     {
-        //The connection string can be read from the some external file
-        private string _connectionString;
+        //The connection string can be read from the some external file        
+        private string connectionString_Sandbox = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB_Sandbox;Integrated Security=true";
 
-        public AppContext(string connectionString)
+        private string connectionString_Production = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB;Integrated Security=true";
+
+        private bool _runInProduction;
+
+        public AppContext()
         {
-            _connectionString = connectionString;
+            _runInProduction = false;
+        }
+
+        public AppContext(bool runInProduction)
+        {
+            _runInProduction = runInProduction;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(_connectionString)
+                .UseSqlServer((_runInProduction ? connectionString_Production : connectionString_Sandbox))
                 .LogTo(Console.WriteLine, LogLevel.Information)
                 .ReplaceService<IHistoryRepository, MyHistoryRepository>()
                 .EnableSensitiveDataLogging();

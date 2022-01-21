@@ -5,10 +5,6 @@ namespace EF.Database
 {
     class Program
     {
-        private static string connectionString_Sandbox = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=NomeBDPreExistente;Integrated Security=true";
-
-        private static string connectionString_Production = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=NomeBDPreExistente_prod;Integrated Security=true";
-
         static int Main(string[] args)
         {
             Console.WriteLine("Do you want to run the migrations in the [S]andbox or [P]roduction target database?");
@@ -18,7 +14,7 @@ namespace EF.Database
             switch (targetDatabase.ToUpper())
             {
                 case "S":
-                    context = new AppContext(connectionString_Sandbox);
+                    context = new AppContext(false);
                     break;
 
                 case "P":
@@ -30,7 +26,7 @@ namespace EF.Database
                     switch (responseProduction.ToUpper())
                     {
                         case "Y":
-                            context = new AppContext(connectionString_Production);
+                            context = new AppContext(true);
                             break;
 
                         default:
