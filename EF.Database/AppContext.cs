@@ -11,7 +11,7 @@ namespace EF.Database
 {
     public class AppContext : DbContext
     {
-        //The connection string can be read from the some external file        
+        //The connection strings also could be read from the some external file        
         private string connectionString_Sandbox = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB_Sandbox;Integrated Security=true";
 
         private string connectionString_Production = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB;Integrated Security=true";
