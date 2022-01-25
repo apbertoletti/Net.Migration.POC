@@ -91,5 +91,5 @@ dotnet ef database update -Migration:0 //Number of migration you want to back (z
 
 1. Choose a short and descriptive migration name. Think of this as a git commit message. For example: "Add-Column-Email-ToTable-Customer"
 2. Try to use atomic migrations, each one with its context. For example, you need to create a new column and populate it, prefer to do two migrations, one to create the new column and the other to populate its content.
-3. If you won´t use a migration anymore, remember to remove it from the project (see remove migration command in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) above). Otherwise, the EF will try to apply it again.
+3. If you will no longer be using a migration, remember to remove it from the project (see remove migration command in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) above). Otherwise, the EF will try to apply it again.
 4. Avoid trying to rollback (or remove) migrations that have already been committed on the repository. Instead, add a new migration with your scripts to undo what you want.
