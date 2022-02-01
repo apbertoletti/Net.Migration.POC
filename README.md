@@ -1,5 +1,5 @@
 # Net.Migration.POC
-Console application database migration POC, use EF Core without data model, that is, only raw SQL is used to send DML or DDL scripts to database.
+Console application database migration POC (Proof Of Concept), use EF Core without data model, that is, only raw SQL is used to send DML or DDL scripts to database.
 
 The idea of this approach is to allow the [Migration concept](https://medium.com/@joelrodrigues/o-que-s%C3%A3o-database-migrations-f817448870a2) to be used with legacy databases.
 
