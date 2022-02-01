@@ -33,19 +33,21 @@ This POC is free to fork and receive improvements.
 
 You can run the follow commands directly on the Package Manager Console in Visual Studio (remember to set the Default Project to migration project before):
 
-1. Adding new migration
+1. Set the Startup Project (Solution explorer) and the Default Project (Package manager console window) to the console migration project
+
+2. Adding new migration
 ~~~
 Add-Migration Name-Of-Your-Migration
 ~~~
 
 
-2. Removing the last migration
+3. Removing the last migration
 ~~~
 Remove-Migration
 ~~~
 
 
-3. Backing to an especific migration on the Database (all subsequent migrations will be undone)
+4. Backing to an especific migration on the Database (all subsequent migrations will be undone)
 ~~~
 Update-Database Name-Of-Migration-You-Want-Back
 ~~~
