@@ -45,6 +45,10 @@ Add-Migration Name-Of-Your-Migration
 ~~~
 Remove-Migration
 ~~~
+or
+~~~
+Remove-Migration -force
+~~~
 
 
 4. Backing to an especific migration on the Database (all subsequent migrations will be undone)
@@ -77,7 +81,10 @@ dotnet tool install --global dotnet-ef
 ~~~
 dotnet ef migrations add Name-Of-Your-Migration
 ~~~
-
+or
+~~~
+dotnet ef migrations add Name-Of-Your-Migration -force
+~~~
 
 4. Removing the last migration
 ~~~
