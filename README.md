@@ -11,7 +11,7 @@ This POC is free to fork and receive improvements (via pull requests).
 
 ## How to use
 
-1. Create two new databases (LegacyDB and LegacyDB_Sandbox) and runt the [initial scripts](https://github.com/apbertoletti/Net.Migration.POC/blob/master/InitialScripts.sql) in each one
+1. Run the [initial scripts](https://github.com/apbertoletti/Net.Migration.POC/blob/master/InitialScripts.sql) to create two new databases (LegacyDB and LegacyDB_Sandbox)
 
 2. Install the [.Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
