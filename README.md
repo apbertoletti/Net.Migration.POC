@@ -33,7 +33,7 @@ This POC is free to fork and receive improvements.
 
 You can run the follow commands directly on the Package Manager Console in Visual Studio:
 
-1. Set the Startup Project (Solution explorer) and the Default Project (Package manager console window) to the console migration project
+1. Set the Startup Project (Solution explorer window) and the Default Project (Package manager console window) to the console migration project
 
 2. Adding new migration
 ~~~
