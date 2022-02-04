@@ -10,11 +10,11 @@ namespace EF.Database
             Console.WriteLine("Do you want to run the migrations in the [S]andbox or [P]roduction target database?");
             var targetDatabase = Console.ReadLine();            
 
-            AppContext context;
+            DatabaseContext context;
             switch (targetDatabase.ToUpper())
             {
                 case "S":
-                    context = new AppContext(false);
+                    context = new DatabaseContext(false);
                     break;
 
                 case "P":
@@ -26,7 +26,7 @@ namespace EF.Database
                     switch (responseProduction.ToUpper())
                     {
                         case "Y":
-                            context = new AppContext(true);
+                            context = new DatabaseContext(true);
                             break;
 
                         default:

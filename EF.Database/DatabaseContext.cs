@@ -9,7 +9,7 @@ using System.Text;
 
 namespace EF.Database
 {
-    public class AppContext : DbContext
+    public class DatabaseContext : DbContext
     {
         //The connection strings also could be read from the some external file        
         private const string CONNECTION_STRING_SANDBOX = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LegacyDB_Sandbox;Integrated Security=true";
@@ -18,12 +18,12 @@ namespace EF.Database
 
         private bool _runInProduction;
 
-        public AppContext()
+        public DatabaseContext()
         {
             _runInProduction = false;
         }
 
-        public AppContext(bool runInProduction)
+        public DatabaseContext(bool runInProduction)
         {
             _runInProduction = runInProduction;
         }
