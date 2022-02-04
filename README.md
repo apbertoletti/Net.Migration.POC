@@ -31,7 +31,7 @@ This POC is free to fork and receive improvements.
 
 ## EF Migration commands (via Package Manager Console)
 
-You can run the follow commands directly on the Package Manager Console in Visual Studio (remember to set the Default Project to migration project before):
+You can run the follow commands directly on the Package Manager Console in Visual Studio:
 
 1. Set the Startup Project (Solution explorer) and the Default Project (Package manager console window) to the console migration project
 
@@ -59,27 +59,33 @@ Update-Database -Migration:0 //Number of migration you want to back (zero if rol
 
 ## EF Migration commands (via .Net CLI)
 
-You can run the follow commands directly on the .Net CLI (remember to navigate to migration project folder before):
+You can run the follow commands directly on the .Net CLI 
 
-1. Install the EF Tools is installed as global in your machine:
+1. Navigate to migration project folder before:
+~~~
+cd .\App.Database
+~~~
+
+
+2. Install the EF Tools is installed as global in your machine:
 ~~~
 dotnet tool install --global dotnet-ef
 ~~~
 
 
-2. Adding new migration
+3. Adding new migration
 ~~~
 dotnet ef migrations add Name-Of-Your-Migration
 ~~~
 
 
-3. Removing the last migration
+4. Removing the last migration
 ~~~
 dotnet ef migrations remove
 ~~~
 
 
-4. Backing to an especific migration on the Database (all subsequent migrations will be undone)
+5. Backing to an especific migration on the Database (all subsequent migrations will be undone)
 ~~~
 dotnet ef database update Name-Of-Migration-You-Want-Back
 ~~~
