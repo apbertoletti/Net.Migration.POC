@@ -1,5 +1,5 @@
 # Net.Migration.POC
-Console application database migration POC, use EF Core without data model, that is, only raw SQL is used to send DML or DDL scripts to database.
+Console application database migration POC (Proof Of Concept), use EF Core without data model, that is, only raw SQL is used to send DML or DDL scripts to database.
 
 The idea of this approach is to allow the [Migration concept](https://medium.com/@joelrodrigues/o-que-s%C3%A3o-database-migrations-f817448870a2) to be used with legacy databases.
 
@@ -33,19 +33,21 @@ This POC is free to fork and receive improvements.
 
 You can run the follow commands directly on the Package Manager Console in Visual Studio (remember to set the Default Project to migration project before):
 
-1. Adding new migration
+1. Set the Startup Project (Solution explorer) and the Default Project (Package manager console window) to the console migration project
+
+2. Adding new migration
 ~~~
 Add-Migration Name-Of-Your-Migration
 ~~~
 
 
-2. Removing the last migration
+3. Removing the last migration
 ~~~
 Remove-Migration
 ~~~
 
 
-3. Backing to an especific migration on the Database (all subsequent migrations will be undone)
+4. Backing to an especific migration on the Database (all subsequent migrations will be undone)
 ~~~
 Update-Database Name-Of-Migration-You-Want-Back
 ~~~
@@ -91,3 +93,5 @@ dotnet ef database update -Migration:0 //Number of migration you want to back (z
 
 1. Choose a short and descriptive migration name. Think of this as a git commit message. For example: "Add-Column-Email-ToTable-Customer"
 2. Try to use atomic migrations, each one with its context. For example, you need to create a new column and populate it, prefer to do two migrations, one to create the new column and the other to populate its content.
+3. If you will no longer be using a migration, remember to remove it from the project (see remove migration command in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) above). Otherwise, the EF will try to apply it again.
+4. Avoid trying to rollback (or remove) migrations that have already been committed on the repository. Instead, add a new migration with your scripts to undo what you want.
