@@ -7,7 +7,7 @@ Recently the EFMigrationHistory table received an improvement to save more detai
 
 ![image](https://user-images.githubusercontent.com/6843493/150549987-a6afa1c6-8715-4940-ac40-fe0acce9873c.png)
 
-This POC is free to fork and receive improvements.
+This POC is free to fork and receive improvements (via pull requests).
 
 ## How to use
 
