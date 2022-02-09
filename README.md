@@ -7,17 +7,17 @@ Recently the EFMigrationHistory table received an improvement to save more detai
 
 ![image](https://user-images.githubusercontent.com/6843493/150549987-a6afa1c6-8715-4940-ac40-fe0acce9873c.png)
 
-This POC is free to fork and receive improvements.
+This POC is free to fork and receive improvements (via pull requests).
 
 ## How to use
 
-1. Create two new databases (LegacyDB and LegacyDB_Sandbox) and runt the [initial scripts](https://github.com/apbertoletti/Net.Migration.POC/blob/master/InitialScripts.sql) in each one
+1. Run the [initial scripts](https://github.com/apbertoletti/Net.Migration.POC/blob/master/InitialScripts.sql) to create two new databases (LegacyDB and LegacyDB_Sandbox)
 
 2. Install the [.Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 3. Clone this [code repository](https://github.com/apbertoletti/Net.Migration.POC.git) (or donwload the Zip)
 
-4. Check the connection string constants in AppContext.cs file, and verify that they are targeting to the corresponding databases
+4. Check the connection string constants in DatabaseContext.cs file, and verify that they are targeting to the corresponding databases
  
 5. Add a new migration (choose your preferred approach in the ["EF Migration commands" sessions](https://github.com/apbertoletti/Net.Migration.POC#ef-migration-commands-via-package-manager-console) below). Consider reading this [best practice session](https://github.com/apbertoletti/Net.Migration.POC/blob/master/README.md#migration-best-practices) before.
 
@@ -44,6 +44,10 @@ Add-Migration Name-Of-Your-Migration
 3. Removing the last migration
 ~~~
 Remove-Migration
+~~~
+or
+~~~
+Remove-Migration -force
 ~~~
 
 
@@ -77,7 +81,10 @@ dotnet tool install --global dotnet-ef
 ~~~
 dotnet ef migrations add Name-Of-Your-Migration
 ~~~
-
+or
+~~~
+dotnet ef migrations add Name-Of-Your-Migration -force
+~~~
 
 4. Removing the last migration
 ~~~
