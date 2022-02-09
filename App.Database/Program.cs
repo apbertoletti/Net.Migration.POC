@@ -7,7 +7,7 @@ namespace EF.Database
     {
         static int Main(string[] args)
         {
-            Console.WriteLine("Do you want to run the migrations in the [S]andbox or [P]roduction target database?");
+            Console.WriteLine("Do you want to apply the migrations in the [S]andbox or [P]roduction target database?");
             var targetDatabase = Console.ReadLine();            
 
             DatabaseContext context;
