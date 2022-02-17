@@ -43,7 +43,7 @@ Add-Migration Name-Of-Your-Migration
 
 3. Apply all the pending migrations to database
 ~~~
-Remove-Migration
+Update-Database
 ~~~
 
 
