@@ -41,7 +41,13 @@ Add-Migration Name-Of-Your-Migration
 ~~~
 
 
-3. Removing the last migration
+3. Apply all the pending migrations to database
+~~~
+Remove-Migration
+~~~
+
+
+4. Removing the last migration
 ~~~
 Remove-Migration
 ~~~
@@ -51,7 +57,7 @@ Remove-Migration -force
 ~~~
 
 
-4. Backing to an especific migration on the Database (all subsequent migrations will be undone)
+5. Backing to an especific migration on the Database (all subsequent migrations will be undone)
 ~~~
 Update-Database Name-Of-Migration-You-Want-Back
 ~~~
@@ -86,13 +92,20 @@ or
 dotnet ef migrations add Name-Of-Your-Migration -force
 ~~~
 
-4. Removing the last migration
+
+4. Apply all the pending migrations to database
+~~~
+dotnet ef database update
+~~~
+
+
+5. Removing the last migration
 ~~~
 dotnet ef migrations remove
 ~~~
 
 
-5. Backing to an especific migration on the Database (all subsequent migrations will be undone)
+6. Backing to an especific migration on the Database (all subsequent migrations will be undone)
 ~~~
 dotnet ef database update Name-Of-Migration-You-Want-Back
 ~~~
