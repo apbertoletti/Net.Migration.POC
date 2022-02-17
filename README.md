@@ -41,7 +41,7 @@ Add-Migration Name-Of-Your-Migration
 ~~~
 
 
-3. Apply all the pending migrations to database
+3. Apply all the pending migrations to database (if you don´t want to apply them running the Console Application)
 ~~~
 Update-Database
 ~~~
@@ -93,7 +93,7 @@ dotnet ef migrations add Name-Of-Your-Migration -force
 ~~~
 
 
-4. Apply all the pending migrations to database
+4. Apply all the pending migrations to database (if you don´t want to apply them running the Console Application)
 ~~~
 dotnet ef database update
 ~~~
