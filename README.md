@@ -57,7 +57,7 @@ Remove-Migration -force
 ~~~
 
 
-5. Backing to an especific migration on the Database (all subsequent migrations will be undone)
+5. Backing to an especific migration on the Database (CAUTION: all subsequent migrations will be rolled back)
 ~~~
 Update-Database Name-Of-Migration-You-Want-Back
 ~~~
@@ -105,7 +105,7 @@ dotnet ef migrations remove
 ~~~
 
 
-6. Backing to an especific migration on the Database (all subsequent migrations will be undone)
+6. Backing to an especific migration on the Database (CAUTION: all subsequent migrations will be rolled back)
 ~~~
 dotnet ef database update Name-Of-Migration-You-Want-Back
 ~~~
